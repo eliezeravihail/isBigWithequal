@@ -1,0 +1,16 @@
+def isbig(num):
+ flag = False
+ test = num%10
+ num//=10
+ while num:
+  temptest = num%10
+  #print(temptest,"<=?",test)
+  if temptest<=test:
+   if temptest == test:
+    flag =True
+   test  =  temptest
+   num//=10
+  else:
+   return False
+ return flag
+print(isbig(11))
